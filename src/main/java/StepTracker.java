@@ -1,15 +1,14 @@
 import java.util.ArrayList;
 public class StepTracker
 {
- private double numSteps;
- public int numActiveDays, numDays, minActiveSteps;
+ public int numSteps, numActiveDays, numDays, minActiveSteps;
  public StepTracker(int ActiveSteps) {
      numSteps= 0;
      numActiveDays = 0;
      numDays = 0;
      minActiveSteps = ActiveSteps;
  } 
- public void addDailySteps(double steps) {
+ public void addDailySteps(int steps) {
      numSteps += steps;
      numDays++;
      if(steps >= minActiveSteps) {
@@ -20,6 +19,6 @@ public class StepTracker
      return numActiveDays;
  } 
  public double averageSteps() {
-     return numSteps/numDays;
+     return (double)numSteps/numDays;
  } 
 } 
